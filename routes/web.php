@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', 'Index@get_List_Song');
 
 Route::get('/login', function () {
@@ -25,11 +26,4 @@ Route::get('/signup', function () {
 Route::get('/songDetail/{id}', 'SongDetail@get_Song');
 
 
-Route::get('/database',function(){
-    Schema::create('baihat', function($table){
-        $table->increments('id');
-        $table->string('name',200);
-        $table->string('filename',200);
-    });
-    echo "Tạo bảng xong";
-});
+
