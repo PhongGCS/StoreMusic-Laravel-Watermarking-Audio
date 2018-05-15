@@ -1,3 +1,6 @@
+<?php 
+use Illuminate\Support\Facades\Auth;
+ ?>
 <nav class="navbar navbar-default nav__bar">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -14,9 +17,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right nav__bar_right">
+        <?php if(!Auth:: check()): ?>
         <li><a href="#" data-toggle="modal" data-target="#login_Modal">Đăng Nhập</a></li>
         <li><a href="#">Đăng Ký</a></li>
-        </li>
+        <?php else: ?>
+        <li><a href="#" data-target="#login_Modal">Hello <?php echo e(Auth::user()->name); ?> </a></li>
+        <li><a href="<?php echo e(route('logout')); ?>">Logout</a></li>
+        <?php endif; ?>
       </ul>
     </div>
   </div>

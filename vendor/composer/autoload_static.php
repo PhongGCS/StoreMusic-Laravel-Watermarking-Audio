@@ -278,6 +278,8 @@ class ComposerStaticInite3cba57ffe1fca4a32177be951c0413a
     );
 
     public static $classMap = array (
+        'AddMonneyForSong' => __DIR__ . '/../..' . '/database/migrations/2018_05_16_041725_add_monney_for_song.php',
+        'AddMonneyForUser' => __DIR__ . '/../..' . '/database/migrations/2018_05_16_041250_add_monney_for_user.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -288,9 +290,14 @@ class ComposerStaticInite3cba57ffe1fca4a32177be951c0413a
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DecodeSong' => __DIR__ . '/../..' . '/app/Http/Controllers/DecodeSong.php',
         'App\\Http\\Controllers\\Index' => __DIR__ . '/../..' . '/app/Http/Controllers/Index.php',
+        'App\\Http\\Controllers\\Login' => __DIR__ . '/../..' . '/app/Http/Controllers/Login.php',
+        'App\\Http\\Controllers\\Logout' => __DIR__ . '/../..' . '/app/Http/Controllers/Logout.php',
+        'App\\Http\\Controllers\\SignUp' => __DIR__ . '/../..' . '/app/Http/Controllers/SignUp.php',
         'App\\Http\\Controllers\\SongDetail' => __DIR__ . '/../..' . '/app/Http/Controllers/SongDetail.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
+        'App\\Http\\Middleware\\Admin_user' => __DIR__ . '/../..' . '/app/Http/Middleware/Admin_user.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
+        'App\\Http\\Middleware\\Normal_user' => __DIR__ . '/../..' . '/app/Http/Middleware/Normal_user.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',

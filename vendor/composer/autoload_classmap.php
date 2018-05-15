@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddMonneyForSong' => $baseDir . '/database/migrations/2018_05_16_041725_add_monney_for_song.php',
+    'AddMonneyForUser' => $baseDir . '/database/migrations/2018_05_16_041250_add_monney_for_user.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -16,9 +18,14 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\DecodeSong' => $baseDir . '/app/Http/Controllers/DecodeSong.php',
     'App\\Http\\Controllers\\Index' => $baseDir . '/app/Http/Controllers/Index.php',
+    'App\\Http\\Controllers\\Login' => $baseDir . '/app/Http/Controllers/Login.php',
+    'App\\Http\\Controllers\\Logout' => $baseDir . '/app/Http/Controllers/Logout.php',
+    'App\\Http\\Controllers\\SignUp' => $baseDir . '/app/Http/Controllers/SignUp.php',
     'App\\Http\\Controllers\\SongDetail' => $baseDir . '/app/Http/Controllers/SongDetail.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
+    'App\\Http\\Middleware\\Admin_user' => $baseDir . '/app/Http/Middleware/Admin_user.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
+    'App\\Http\\Middleware\\Normal_user' => $baseDir . '/app/Http/Middleware/Normal_user.php',
     'App\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/Http/Middleware/RedirectIfAuthenticated.php',
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',

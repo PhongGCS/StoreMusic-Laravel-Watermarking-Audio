@@ -11,7 +11,7 @@ class Login extends Controller
         $email =  $request['email'];
         $password = $request['password'];
         if ( Auth::attempt(['email' => $email, 'password' => $password]) ){
-            return view('partials.thanhcong');
+            return view('buy_song');
         }else{
             return redirect()->route('index_page');
         }
