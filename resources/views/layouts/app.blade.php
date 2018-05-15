@@ -12,6 +12,7 @@
 </head>
 <body>
 <div class="content-area" style="background-image:url({{ @asset('images/background.jpg') }})">
+@include('partials.contents.login')
 @include('partials.header')
 @yield('content')
 </div>

@@ -14,7 +14,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right nav__bar_right">
-        <li><a href="#">Đăng Nhập</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#login_Modal">Đăng Nhập</a></li>
         <li><a href="#">Đăng Ký</a></li>
         </li>
       </ul>

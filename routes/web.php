@@ -12,12 +12,9 @@
 */
 
 
-Route::get('/', 'Index@get_List_Song');
+Route::get('/', 'Index@get_List_Song')->name("index_page");
 
-Route::get('/login', function () {
-    return view('login');
-});
-
+Route::post('login', 'Login@checkLogin')->name('Login');
 
 Route::get('/signup', function () {
     return view('signup');
@@ -25,5 +22,4 @@ Route::get('/signup', function () {
 
 Route::get('/songDetail/{id}', 'SongDetail@get_Song');
 
-
-
+Route::get('/BuySong/{id}', 'BuySong@get_Song')->middleware(["Normal_user","Admin_user"]);
