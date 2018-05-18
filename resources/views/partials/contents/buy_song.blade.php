@@ -1,4 +1,4 @@
-<div class="container">
+
     <table class="table" style="background-color: #000000b5;">
     <thead>
       <tr>
@@ -14,10 +14,10 @@
       <tr>
         <td>{{$loop->iteration}}</td>
         <td>{{ $item->name }}</td>
-        <td>34.000 VNĐ</td>
-        <td><a href="buy" class="btn btn-primary" >Buy</a></td>
+        <td>{{ $item->Price }} VNĐ</td>
+        <td><a href="{{  route('buysong_detail', $item->id ) }}" class="btn btn-primary" >Buy</a></td>
       </tr>
       @endforeach
     </tbody>
   </table>  
-  </div>
+ 

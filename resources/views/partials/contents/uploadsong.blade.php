@@ -1,14 +1,24 @@
-<form action="{{route("postFile")}}" method="post" enctype="multipart/form-data" >
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+<form action="{{route("PostSong")}}" method="post" enctype="multipart/form-data" >
+{!! csrf_field() !!}
+<div class="col-md-6">
+<div class="form-group">
+    <label for="SongName">Song Name</label>
+    <input type="text" class="form-control" placeholder="Quan trọng phải là thần thái" name="name_song">
   </div>
+</div>
+<div class="col-md-6">
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="Price">Price</label>
+    <input type="text" class="form-control" placeholder="36000" name="price_song">
   </div>
+</div>
+<div class="col-md-6">
   <div class="form-group">
-    <label for="exampleFormControlFile1">Example file input</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <label for="SongFile">Song File</label>
+    <input type="file" class="form-control-file" name="file_song">
+  </div>
+</div>
+<div class="col-md-6">
+<input type="submit" class=" btn btn-primary">
   </div>
 </form>

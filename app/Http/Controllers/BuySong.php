@@ -43,10 +43,11 @@ class BuySong extends Controller
             $song_name = $song[0]->filename;
             $result = Signature::signature_Song( $song_name, Auth::user()->name);
             if($result){
-                return view('signtature_song',['url_download'=> $result, 'error'=>false]);
+                return view('signtature_song',['url_download'=> $result, 'error'=>true]);
             }
+            return view('signtature_song',['url_download'=> false, 'error'=>false]);            
         }
-        return view('index_page');
+        return view('signtature_song',['url_download'=> false, 'error'=>false]);
     }
 
     public function get_List_Song(){
