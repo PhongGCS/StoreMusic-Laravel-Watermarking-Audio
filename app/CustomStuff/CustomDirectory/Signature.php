@@ -21,7 +21,7 @@ class Signature {
             }
             $tmp['subchunk3']['data'] = pack("H*", $subchunk3data[1]);
             //Write new audio file
-            $newFileName = "Buy-".$date."-".$filename;
+            $newFileName = "Buy-".$date."-".$filename.".wav";
             $wavFile->WriteFile($tmp, "../public/audios/" . $newFileName);
             unlink('../storage/app/audios/'.$filename.'_Download.wav');
             // Xoa trong 5 phut.
