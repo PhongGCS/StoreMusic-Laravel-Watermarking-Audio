@@ -31,6 +31,10 @@ Route::get('BuySong/{id}', 'BuySong@signtature_song')->middleware(['Normal_user'
 
 Route::get('logout','Logout@index')->name('logout');
 
+Route::get('UploadSong','UploadSong@index')->name('Uploadsong')->middleware(['Normal_user', 'Admin_user']);
+
+Route::post('UploadSong','UploadSong@postSong')->name('PostSong')->middleware(['Normal_user', 'Admin_user']);
+
 Route::get('RevertSignature', 'RevertSignatureSong@index')->middleware(['Normal_user']);
 
 // Route Put SOng item from google API
@@ -73,3 +77,4 @@ Route::get('share', function() {
     $permissions = $service->permissions->create($file['basename'], $permission);
     return Storage::cloud()->url($file['path']);
 });
+
