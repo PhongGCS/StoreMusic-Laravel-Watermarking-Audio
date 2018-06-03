@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container" style=" margin-top: 18%; text-align: center;">
-@include('partials.contents.revert_signature')
+@include('partials.contents.uploadsign')
 </div>
 @endsection
 

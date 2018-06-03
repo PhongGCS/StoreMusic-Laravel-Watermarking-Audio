@@ -15,7 +15,7 @@ class UploadSong extends Controller
             $name_song = $request->input('name_song'); 
             $price_song = (int) $request->input('price_song'); 
             $file_song = $request->file('file_song');
-            var_dump($file_song->getClientOriginalExtension('file_song'));
+            //var_dump($file_song->getClientOriginalExtension('file_song'));
             if( $file_song->getClientOriginalExtension('file_song') == 'wav'){
                 //$file_song->move('audios/', $namefile);
                 $path = Storage::putFile('audios', $file_song);

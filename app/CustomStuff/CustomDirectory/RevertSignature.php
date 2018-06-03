@@ -4,7 +4,7 @@ use App\CustomStuff\CustomDirectory\WavFile;
 class RevertSignature {
    public static function  Revert_Signature_Song($filename){
         $wavFile = new WavFile;
-        $fileName= '../public/audios/'.$filename;
+        $fileName= '../storage/app/'.$filename;
         $tmp = $wavFile->ReadFile($fileName);
         //Get binary code of signature
         $subchunk3data = unpack("H*", $tmp['subchunk3']['data']);
@@ -17,6 +17,7 @@ class RevertSignature {
             for($i = 80; $i < 80+$lenofsigndat*8; $i++){
                 $signature .= substr(str_pad(base_convert(substr($subchunk3data[1], $i*2, 2), 16, 2), 8, '0', STR_PAD_LEFT), 7, 1);
             }
+            
             return $signdat = BintoText(substr($signature, 80, $lenofsigndat*8));
         }
         return false;
