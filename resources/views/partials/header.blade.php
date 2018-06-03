@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Auth;
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right nav__bar_right">
         @if (!Auth:: check())
-        <li><a href="#" data-toggle="modal" data-target="#login_Modal">Đăng Nhập</a></li>
-        <li><a href="#">Đăng Ký</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#login_Modal">Login</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#signup_Modal">Sign up</a></li>
         @else
         <li><a href="#" data-target="#login_Modal">Hello {{ Auth::user()->name }} </a></li>
         <li><a href="{{ route('logout') }}">Logout</a></li>
