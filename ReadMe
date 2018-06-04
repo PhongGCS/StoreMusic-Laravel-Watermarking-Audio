@@ -1,0 +1,12 @@
+# Welcome to the StoreMusic-Laravel-Watermarking-Audio wiki!  
+**Author:** Đỗ Khắc Phong - N14DCAT106   
+**Reference:** How to add google driver to laravel -> https://gist.github.com/ivanvermeyen/cc7c59c185daad9d4e7cb8c661d7b89b    
+
+Project demo music store có áp dụng Watermarking Audio.    
+![](https://i.imgur.com/rKI8Yo7.jpg)  
+
+## Chức năng: 
+**Mua nhạc:** cho phép người dùng mua nhạc có kèm theo ký tên đánh dấu vào bài hát đó.  
+**Google Driver:** Tích Google Driver API vào trong hệ thống giúp giảm dụng lượng cần phải lưu tại server.    
+**Nghe Nhạc:** Gọi API Google Driver dể lấy tất cả các bài hát và xuất ra theo play list audio cho người dùng. giúp giảm dung lượng    
+**Revert chữ ký:** Cho phép upload audio và xem bài hát vừa upload có phải bản quyền từ trang web hay không 
